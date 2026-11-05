@@ -1,0 +1,121 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De plek · Vuurvast Borne</title>
+<meta name="description" content="Nieuwe woningen in Borne, gebakken voor generaties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wdth,wght@62..100,400..800&display=swap"
+rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+img,svg{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.nav{position:sticky;top:0;z-index:20}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;
+height:72px;gap:24px}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav a{text-decoration:none}
+.btn{display:inline-block;text-decoration:none;cursor:pointer;border:0;
+font:inherit}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+.g5{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card h3{font-size:22px;hyphens:auto}
+.stat4{grid-template-columns:repeat(4,1fr)}
+.num{white-space:nowrap}
+.sec{padding:110px 0}
+.demo{font-size:12px;opacity:.7}
+.zoeker{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;
+align-items:start}
+.plot{cursor:pointer;transition:opacity .2s,transform .2s}
+.plot:hover{opacity:.75}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.filters button{cursor:pointer;font:inherit}
+.form{display:grid;gap:16px;max-width:620px}
+.form label{display:grid;gap:6px;font-size:14px}
+.form input,.form select,.form textarea{font:inherit;padding:14px 16px;
+border:1px solid currentColor;background:transparent;color:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{display:flex;gap:8px;align-items:center;padding:10px 14px;
+border:1px solid currentColor;cursor:pointer}
+footer{padding:60px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;
+flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:all .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){.g2,.g3,.g5,.zoeker,.stat4{grid-template-columns:1fr 1fr}.g2,.zoeker{grid-template-columns:1fr}
+.nav ul{display:none}.sec{padding:70px 0}.nav .btn{padding:10px 16px;font-size:14px}.wrap{padding:0 16px}}
+
+body{background:#141312;color:#FAFAF7;font:17px/1.6 'Archivo',
+sans-serif}
+h1,h2,h3,.serif{font-family:'Archivo Black',sans-serif;
+text-transform:uppercase;line-height:.92;letter-spacing:-.01em}
+h1{font-size:clamp(64px,12vw,184px)}h2{font-size:clamp(42px,6vw,92px)}
+h3{font-size:28px}
+.cond{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:800;
+text-transform:uppercase;letter-spacing:.02em}
+.eyebrow{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:800;
+text-transform:uppercase;letter-spacing:.14em;color:#FF5B1F;
+font-size:15px}
+.nav{background:#141312;border-bottom:1px solid #ffffff1a}
+.nav a{font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.1em;font-size:15px}
+.btn{background:#FF5B1F;color:#141312;padding:18px 30px;
+font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.1em}
+.btn.ghost{background:transparent;color:inherit;border:2px solid
+currentColor}
+.hero{padding:120px 0 0;position:relative;overflow:hidden}
+.hero .glow{position:absolute;right:-200px;top:-120px;width:760px;
+height:760px;border-radius:50%;background:radial-gradient(circle,
+#FF5B1F 0,#9C2F17 38%,transparent 70%);opacity:.55;
+filter:blur(10px)}
+.hero .wrap{position:relative}
+.hero p.lead{font-size:22px;max-width:560px;margin:30px 0 40px;
+color:#D8D4CC}
+.ticker{margin-top:100px;border-top:1px solid #ffffff22;
+border-bottom:1px solid #ffffff22;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;padding:18px 0;animation:tick 30s linear
+infinite;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:800;
+text-transform:uppercase;font-size:28px;letter-spacing:.06em}
+@keyframes tick{to{transform:translateX(-50%)}}
+.card{background:#1f1d1b;padding:34px;border-top:3px solid
+#FF5B1F}
+.as{background:#D8D4CC;color:#141312}
+.as .card{background:#FAFAF7}
+.num{font-family:'Archivo Black',sans-serif;font-size:96px;line-height:.9;
+background:linear-gradient(180deg,#FF5B1F,#9C2F17);
+-webkit-background-clip:text;background-clip:text;color:transparent;
+font-size:clamp(56px,6.4vw,96px)}
+.filters button{background:transparent;color:inherit;border:2px solid
+#ffffff44;padding:10px 18px;font-stretch:62%;font-weight:800;
+text-transform:uppercase;letter-spacing:.08em}
+.filters button.on{background:#FF5B1F;color:#141312;
+border-color:#FF5B1F}
+footer{background:#0b0a0a;color:#D8D4CC}
+</style></head><body>
+<nav class="nav"><div class="wrap"><a href="index.html" style="text-decoration:none;font-family:'Archivo Black';font-size:24px;letter-spacing:.02em;position:relative">VUURVAST<span style="position:absolute;left:0;bottom:-5px;width:24px;height:4px;background:#FF5B1F"></span></a><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plek.html" style="opacity:.55">De plek</a></li><li><a href="woning.html">Rijwoning</a></li></ul>
+<a class="btn" href="inschrijven.html">Schrijf je in</a></div></nav>
+<section class="sec" style="padding-top:70px"><div class="wrap">
+<div class="eyebrow">De plek</div><h1 style="margin:18px 0 26px;font-size:
+clamp(44px,6vw,90px)">Waar Borne zijn stenen bakte.</h1><p style=
+"max-width:700px;font-size:20px">De Steenbakkersweg heette vroeger de Oude
+Deldensestraat. Twee families bakten hier generaties lang de stenen voor
+Borne. Nu komt hier een nieuwe wijk, met het water als hart.</p></div>
+</section><section class="sec as"><div class="wrap grid g2">
+<h2 class="reveal">Van fabriek tot thuis.</h2><div class="timeline"><div class="reveal"><h3>1864</h3><p style="margin-top:8px">Steenfabriek Scholten begint aan de Oude Deldensestraat.</p></div><div class="reveal"><h3>Topjaren</h3><p style="margin-top:8px">Morselt bakt 200.000 stenen per week. De St. Stephanuskerk en de watertoren worden ermee gebouwd.</p></div><div class="reveal"><h3>2026</h3><p style="margin-top:8px">Planvorming met de gemeente Borne en gesprekken met de buurt.</p></div><div class="reveal"><h3>Straks</h3><p style="margin-top:8px">135 woningen aan het water. Het volgende hoofdstuk.</p></div>
+</div></div></section><section class="sec"><div class="wrap"><div
+class="eyebrow">Bereikbaarheid</div><h2 style="margin:18px 0 36px">Alles
+dichtbij.</h2><div class="grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="card reveal"><h3>Centrum Borne</h3><p>op de fiets</p></div><div class="card reveal"><h3>Station Borne</h3><p>op de fiets</p></div><div class="card reveal"><h3>Hengelo</h3><p>met de auto, via de A1</p></div><div class="card reveal"><h3>Almelo</h3><p>met de auto of de trein</p></div></div><p class="demo" style="margin-top:24px">Reistijden volgen na
+de definitieve situatie.</p></div></section>
+<footer><div class="wrap"><div><a href="index.html" style="text-decoration:none;font-family:'Archivo Black';font-size:24px;letter-spacing:.02em;position:relative">VUURVAST<span style="position:absolute;left:0;bottom:-5px;width:24px;height:4px;background:#FF5B1F"></span></a>
+<p style="margin-top:14px;max-width:360px">Nieuwe woningen in Borne, gebakken voor generaties.</p></div>
+<div><b>Steenbakkersweg 10, Borne</b><br>Een ontwikkeling van MvdB Groep<br>
+Marketing: Spring Marketing Agency</div>
+<div class="demo">Voorbeeldwebsite, merkrichting 3 van 3.<br>
+Prijzen zijn een indicatie (prijspeil 2025).<br>
+<a href="../index.html">Alle richtingen</a></div></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)
+e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script></body></html>
