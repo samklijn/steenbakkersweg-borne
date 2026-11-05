@@ -1,123 +1,168 @@
 <!doctype html><html lang="nl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Inschrijven · De Steenbakkerij Borne</title>
+<title>Inschrijven · De Steenbakkerij · Borne</title>
 <meta name="description" content="Waar Borne zijn stenen bakte, bouwen we nu aan je thuis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;600&display=swap"
 rel="stylesheet"><style>
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#F8F4EC;color:#26201C}
 img,svg{display:block;max-width:100%}a{color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.nav{position:sticky;top:0;z-index:20}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;
-height:72px;gap:24px}
-.nav ul{display:flex;gap:28px;list-style:none}
-.nav a{text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.sec{padding:110px 0}.sec.tight{padding:70px 0}
+.grid{display:grid;gap:28px}.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:
+repeat(4,1fr)}
 .btn{display:inline-block;text-decoration:none;cursor:pointer;border:0;
-font:inherit}
-.grid{display:grid;gap:28px}
-.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
-.g5{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.card h3{font-size:22px;hyphens:auto}
-.stat4{grid-template-columns:repeat(4,1fr)}
-.num{white-space:nowrap}
-.sec{padding:110px 0}
-.demo{font-size:12px;opacity:.7}
-.zoeker{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;
+font:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.lead{font-size:21px;line-height:1.6;max-width:700px}
+.muted{opacity:.7}.small{font-size:13px}
+.dark{background:#26201C;color:#EDE3D3}
+.softbg{background:#EDE3D3}
+.plan .kavel rect{fill:#A04A2C;stroke:#EDE3D3;
+stroke-width:1.5;cursor:pointer;transition:fill .15s,opacity .15s}
+.plan .kavel:hover rect,.plan .kavel.sel rect{fill:#C8893B}
+.plan .kavel.dim rect{opacity:.15}
+.zoeker{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;
 align-items:start}
-.plot{cursor:pointer;transition:opacity .2s,transform .2s}
-.plot:hover{opacity:.75}
-.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
-.filters button{cursor:pointer;font:inherit}
-.form{display:grid;gap:16px;max-width:620px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.filters a{text-decoration:none;cursor:pointer}
+details{border-bottom:1px solid #26201C33;padding:22px 0}
+details summary{cursor:pointer;font-size:19px;list-style:none;
+display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:24px;line-height:1}
+details[open] summary::after{content:'–'}
+details p{margin-top:12px;max-width:760px}
+.form{display:grid;gap:16px}
 .form label{display:grid;gap:6px;font-size:14px}
-.form input,.form select,.form textarea{font:inherit;padding:14px 16px;
-border:1px solid currentColor;background:transparent;color:inherit}
+.form input:not([type=checkbox]),.form select,.form textarea{font:inherit;
+padding:14px 16px;border:1px solid #26201C55;background:#ffffffaa;
+color:inherit}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips label{display:flex;gap:8px;align-items:center;padding:10px 14px;
-border:1px solid currentColor;cursor:pointer}
-footer{padding:60px 0 40px;font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:30px;
-flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(24px);transition:all .8s ease}
+border:1px solid #26201C55;cursor:pointer;font-size:15px}
+.steps{display:grid}
+.steps li{list-style:none;display:grid;grid-template-columns:80px 1fr;
+gap:20px;padding:24px 0;border-top:1px solid #26201C22}
+.steps li .n{font-size:40px;line-height:1}
+.crumbs{font-size:13px;margin-bottom:26px;opacity:.75}
+.crumbs a{text-decoration:none}
+.ok{display:none}form.done .flds{display:none}form.done .ok{display:
+block}
+footer{padding:70px 0 40px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1}
+.reveal{opacity:0;transform:translateY(22px);transition:all .8s ease}
 .reveal.in{opacity:1;transform:none}
-@media(max-width:860px){.g2,.g3,.g5,.zoeker,.stat4{grid-template-columns:1fr 1fr}.g2,.zoeker{grid-template-columns:1fr}
-.nav ul{display:none}.sec{padding:70px 0}.nav .btn{padding:10px 16px;font-size:14px}.wrap{padding:0 16px}}
+@media(max-width:900px){.g2,.g3,.g4,.zoeker,footer .cols{
+grid-template-columns:1fr}.sec{padding:70px 0}.wrap{padding:0 18px}}
 
-body{background:#F8F4EC;color:#26201C;font:17px/1.7 'Work Sans',
-sans-serif}
-h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600;
-letter-spacing:-.01em;line-height:1.05}
-h1{font-size:clamp(52px,8vw,112px)}h2{font-size:clamp(36px,4.6vw,64px)}
-h3{font-size:26px}em,.it{font-family:'Fraunces',serif;font-style:italic;
+body{font:17px/1.75 'Work Sans',sans-serif}
+h1,h2,h3,h4,.serif{font-family:'Fraunces',serif;font-weight:600;
+letter-spacing:-.01em;line-height:1.06}
+h1{font-size:clamp(50px,8vw,118px)}h2{font-size:clamp(34px,4.6vw,62px)}
+h3{font-size:27px}em,.it{font-family:'Fraunces',serif;font-style:italic;
 font-weight:400}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;
 color:#A04A2C;font-weight:600}
-.nav{background:#F8F4ECee;backdrop-filter:blur(6px);
-border-bottom:1px solid #26201C22}
-.nav a{font-size:14px;letter-spacing:.04em}
+header.site{border-bottom:1px solid #26201C22;background:#F8F4EC;
+position:sticky;top:0;z-index:30}
+header.site .top{display:flex;justify-content:space-between;
+align-items:center;height:76px}
+header.site nav{display:flex;justify-content:center;gap:34px;
+padding:0 0 16px;font-size:13px;letter-spacing:.12em;text-transform:
+uppercase}
+header.site nav a{text-decoration:none;padding-bottom:3px}
+header.site nav a.on{border-bottom:2px solid #A04A2C}
 .btn{background:#A04A2C;color:#F8F4EC;padding:16px 28px;
 font-weight:600;letter-spacing:.04em}
 .btn.ghost{background:transparent;color:inherit;border:1px solid
 currentColor}
 .hero{background:#A04A2C;color:#F8F4EC;position:relative;
-overflow:hidden;padding:150px 0 120px}
-.hero .bricks{position:absolute;inset:0;opacity:.18}
+overflow:hidden;padding:110px 0 100px}
+.hero .art{position:absolute;inset:0;opacity:.16}
 .hero .wrap{position:relative}
-.hero p.lead{font-size:22px;max-width:620px;margin:26px 0 38px}
 .hero .btn{background:#F8F4EC;color:#A04A2C}
-.hero .btn.ghost{background:transparent;color:#F8F4EC;border:1px solid #F8F4EC}
-.rule{height:1px;background:#C8893B;margin:22px 0}
-.klei{background:#EDE3D3}
-.card{background:#F8F4EC;border-top:4px solid #A04A2C;
-padding:30px}
-.num{font-family:'Fraunces',serif;font-size:72px;color:#A04A2C;
-line-height:1}
-.drop:first-letter{font-family:'Fraunces',serif;font-size:84px;
+.hero .btn.ghost{background:transparent;color:#F8F4EC;border:1px solid
+#F8F4EC}
+.dark .btn.ghost{color:#EDE3D3}
+.chap{font-family:'Fraunces',serif;font-style:italic;font-size:22px;
+color:#C8893B}
+.drop::first-letter{font-family:'Fraunces',serif;font-size:88px;
 float:left;line-height:.8;padding:8px 12px 0 0;color:#A04A2C}
-.timeline{border-left:2px solid #C8893B;padding-left:34px}
-.timeline div{margin-bottom:34px;position:relative}
-.timeline div:before{content:'';position:absolute;left:-42px;top:9px;
-width:14px;height:14px;background:#A04A2C}
-.dark{background:#26201C;color:#EDE3D3}
-.filters button{background:transparent;border:1px solid #26201C;
-padding:9px 16px}
-.filters button.on{background:#26201C;color:#F8F4EC}
+.cols2{columns:2;column-gap:48px}
+.cat a{display:grid;grid-template-columns:90px 1.6fr 1fr 1fr 40px;
+gap:20px;align-items:baseline;padding:30px 12px;border-top:1px solid
+#26201C33;text-decoration:none;transition:background .2s}
+.cat a:hover{background:#EDE3D3}
+.cat .rn{font-family:'Fraunces',serif;font-size:44px;color:#A04A2C}
+.card{background:#F8F4EC;border-top:4px solid #A04A2C;padding:30px}
+.softbg .card{background:#F8F4EC}
+.num{font-family:'Fraunces',serif;font-size:76px;color:#A04A2C;
+line-height:1}
+.filters a{border:1px solid #26201C;padding:8px 16px;font-size:14px}
+.filters a.on{background:#26201C;color:#F8F4EC}
+.steps li .n{font-family:'Fraunces',serif;color:#A04A2C}
 footer{background:#26201C;color:#EDE3D3}
+@media(max-width:900px){header.site nav{overflow-x:auto;justify-content:
+flex-start;gap:20px}.cols2{columns:1}.cat a{grid-template-columns:60px
+1fr}.cat a>span:nth-child(n+3){display:none}}
 </style></head><body>
-<nav class="nav"><div class="wrap"><a href="index.html" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="26" viewBox="0 0 34 26"><rect x="0" y="0" width="16" height="7" fill="#A04A2C"/><rect x="18" y="0" width="16" height="7" fill="#A04A2C"/><rect x="9" y="9.5" width="16" height="7" fill="#A04A2C"/><rect x="0" y="19" width="16" height="7" fill="#A04A2C"/><rect x="18" y="19" width="16" height="7" fill="#A04A2C"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:22px;letter-spacing:.02em">De Steenbakkerij</span></a><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plek.html">De plek</a></li><li><a href="woning.html">Rijwoning</a></li></ul>
-<a class="btn" href="inschrijven.html">Schrijf je in</a></div></nav>
-<section class="sec" style="padding-top:70px"><div class="wrap
-grid g2"><div><div class="eyebrow">Inschrijven</div><h1 style="margin:18px 0
-26px;font-size:clamp(44px,6vw,90px)">Zet me op de lijst.</h1><p style=
-"font-size:19px;max-width:460px">Je hoort als eerste de prijzen, de planning
-en de datum van de informatieavond. Inschrijven is gratis en verplicht je
-tot niets.</p></div>
-<form class="form" onsubmit="event.preventDefault();this.innerHTML=
-'<h2>Dank je wel.</h2><p>Je staat op de lijst. Dit is een voorbeeldsite, er
-is niets verstuurd.</p>'">
-<label>Naam<input required></label><label>E-mail<input type="email"
-required></label><label>Telefoon<input></label>
-<div><p style="margin-bottom:10px;font-size:14px">Welke woning past bij
-je?</p><div class="chips"><label><input type="checkbox"> Appartement</label><label><input type="checkbox"> Appartement begane grond</label><label><input type="checkbox"> Rij- en hoekwoning</label><label><input type="checkbox"> Twee-onder-een-kap</label><label><input type="checkbox"> Vrijstaande woning</label></div></div>
-<label>Je woont nu<select><option>In Borne</option><option>In Hengelo of
-Almelo</option><option>Elders in Twente</option><option>Buiten Twente
-</option></select></label>
-<label>Je situatie<select><option>Ik zoek mijn eerste koopwoning</option>
-<option>Ik heb een koopwoning die ik ga verkopen</option><option>Ik huur nu
-</option></select></label>
-<button class="btn" type="submit">Schrijf me in</button>
-<p class="demo">Voorbeeldformulier: er wordt niets verstuurd.</p></form>
-</div></section>
-<footer><div class="wrap"><div><a href="index.html" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="26" viewBox="0 0 34 26"><rect x="0" y="0" width="16" height="7" fill="#F8F4EC"/><rect x="18" y="0" width="16" height="7" fill="#F8F4EC"/><rect x="9" y="9.5" width="16" height="7" fill="#F8F4EC"/><rect x="0" y="19" width="16" height="7" fill="#F8F4EC"/><rect x="18" y="19" width="16" height="7" fill="#F8F4EC"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:22px;letter-spacing:.02em">De Steenbakkerij</span></a>
-<p style="margin-top:14px;max-width:360px">Waar Borne zijn stenen bakte, bouwen we nu aan je thuis.</p></div>
-<div><b>Steenbakkersweg 10, Borne</b><br>Een ontwikkeling van MvdB Groep<br>
-Marketing: Spring Marketing Agency</div>
-<div class="demo">Voorbeeldwebsite, merkrichting 1 van 3.<br>
-Prijzen zijn een indicatie (prijspeil 2025).<br>
-<a href="../index.html">Alle richtingen</a></div></div></footer>
+<header class="site"><div class="wrap"><div class="top">
+<a href="vragen.html" class="small" style="text-decoration:none;
+letter-spacing:.1em;text-transform:uppercase">Vragen</a><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="32" height="25" viewBox="0 0 32 25"><rect x="0" y="0" width="15" height="6.5" fill="#A04A2C"/><rect x="17" y="0" width="15" height="6.5" fill="#A04A2C"/><rect x="8.5" y="9" width="15" height="6.5" fill="#A04A2C"/><rect x="0" y="18" width="15" height="6.5" fill="#A04A2C"/><rect x="17" y="18" width="15" height="6.5" fill="#A04A2C"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:23px">De Steenbakkerij</span></a><a
+class="btn" href="inschrijven.html" style="padding:12px 20px">Schrijf je in
+</a></div><nav><a href="woningen.html">Woningen</a><a href="plan.html">Het plan</a><a href="verhaal.html">Het verhaal</a><a href="kopen.html">Zo werkt kopen</a><a href="nieuws.html">Nieuws</a><a href="vragen.html">Vragen</a></nav></div></header>
+<main><section class="sec" style="padding-top:70px;padding-bottom:70px"><div
+class="wrap"><p class="crumbs"><a href="index.html">Home</a> / <a href="inschrijven.html">Inschrijven</a></p><p class="chap" style="margin-bottom:10px">Inschrijven</p><h1 style="font-size:clamp(42px,
+6.4vw,96px)">Zet me op de lijst.</h1><p class="lead" style="margin-top:24px">Je hoort als eerste de prijzen, de planning en de datum van de informatieavond. Gratis en vrijblijvend.</p></div></section><section class="sec" style="padding-top:30px"><div class="wrap
+grid g2"><form class="form inschrijf"><div class="flds form"><label>Voornaam
+en achternaam<input required name="naam"></label><label>E-mailadres<input
+type="email" required name="mail"></label><label>Telefoonnummer<input
+name="tel"></label><div><p style="margin-bottom:10px;font-size:14px">Welke
+woning past bij je?</p><div class="chips"><label><input type="checkbox" name="t" value="appartement"> Appartement</label><label><input type="checkbox" name="t" value="tuinappartement"> Tuinappartement</label><label><input type="checkbox" name="t" value="rijwoning"> Rij- en hoekwoning</label><label><input type="checkbox" name="t" value="twee-onder-een-kap"> Twee-onder-een-kapwoning</label><label><input type="checkbox" name="t" value="vrijstaand"> Vrijstaande woning</label></div></div><label>Je woont
+nu<select><option>In Borne</option><option>In Hengelo of Almelo</option>
+<option>Elders in Twente</option><option>Buiten Twente</option></select>
+</label><label>Je situatie<select><option>Ik zoek mijn eerste koopwoning
+</option><option>Ik heb een koopwoning die ik ga verkopen</option><option>
+Ik huur nu</option></select></label><label>Vraag of opmerking<textarea
+rows="3"></textarea></label><label style="display:flex;gap:10px;
+align-items:center"><input type="checkbox" required> Ik ga akkoord met het
+verwerken van mijn gegevens voor dit project.</label><button class="btn"
+type="submit">Schrijf me in</button></div><div class="ok card"><h2>Dank je
+wel.</h2><p style="margin-top:14px">Je staat op de lijst. Dit is een
+voorbeeldwebsite: er is niets verstuurd.</p><p style="margin-top:22px"><a
+class="btn" href="woningen.html">Bekijk de woningen</a></p></div></form>
+<div class="card"><h3>Wat er nu gebeurt</h3><ol class="steps"
+style="margin-top:10px"><li><span class="n">01</span><div><b>Schrijf je in</b><p>Gratis en vrijblijvend, met je voorkeur per woningtype.</p></div></li><li><span class="n">02</span><div><b>Informatieavond</b><p>Je hoort het plan, ziet de woningen en stelt je vragen.</p></div></li><li><span class="n">03</span><div><b>Prijslijst</b><p>Ingeschrevenen krijgen de prijslijst als eerste.</p></div></li></ol><p style="margin-top:16px"><a
+href="kopen.html">Alle stappen →</a></p></div></div></section>
+<script>const q=new URLSearchParams(location.search);const ty=q.get('type');
+if(ty){const c=document.querySelector('input[value="'+ty+'"]');if(c)
+c.checked=true}const b=q.get('bnr');if(b){const ta=document.querySelector(
+'textarea');ta.value='Interesse in bouwnummer '+b}</script></main>
+<footer><div class="wrap"><div class="cols"><div><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="32" height="25" viewBox="0 0 32 25"><rect x="0" y="0" width="15" height="6.5" fill="#EDE3D3"/><rect x="17" y="0" width="15" height="6.5" fill="#EDE3D3"/><rect x="8.5" y="9" width="15" height="6.5" fill="#EDE3D3"/><rect x="0" y="18" width="15" height="6.5" fill="#EDE3D3"/><rect x="17" y="18" width="15" height="6.5" fill="#EDE3D3"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:23px">De Steenbakkerij</span></a>
+<p style="margin-top:16px;max-width:320px">Waar Borne zijn stenen bakte, bouwen we nu aan je thuis.</p>
+<p style="margin-top:16px">Steenbakkersweg 10, Borne<br>Een ontwikkeling van
+MvdB Groep</p></div><div><p class="eyebrow" style="margin-bottom:12px;
+color:inherit">Pagina's</p><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plan.html">Het plan</a></li><li><a href="verhaal.html">Het verhaal</a></li><li><a href="kopen.html">Zo werkt kopen</a></li><li><a href="duurzaam.html">Duurzaam</a></li><li><a href="nieuws.html">Nieuws</a></li><li><a href="vragen.html">Vragen</a></li><li><a href="inschrijven.html">Inschrijven</a></li></ul></div><div><p class="eyebrow"
+style="margin-bottom:12px;color:inherit">Woningen</p><ul><li><a href="appartement.html">Appartement</a></li><li><a href="tuinappartement.html">Tuinappartement</a></li><li><a href="rijwoning.html">Rij- en hoekwoning</a></li><li><a href="twee-onder-een-kap.html">Twee-onder-een-kapwoning</a></li><li><a href="vrijstaand.html">Vrijstaande woning</a></li></ul>
+</div><div><p class="eyebrow" style="margin-bottom:12px;color:inherit">
+Contact</p><ul><li><a href="inschrijven.html">Schrijf je in</a></li><li><a
+href="vragen.html">Veelgestelde vragen</a></li><li><a href="nieuws.html">
+Nieuws</a></li><li><a href="duurzaam.html">Duurzaam wonen</a></li><li><a
+href="../index.html">Alle drie de richtingen</a></li></ul></div></div>
+<p class="small muted" style="margin-top:50px">Voorbeeldwebsite van Spring
+Marketing Agency, merkrichting 1 van 3. Prijzen zijn een indicatie op
+prijspeil 2025, v.o.n. Aan deze site kunnen geen rechten worden ontleend.</p>
+</div></footer>
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)
-e.target.classList.add('in')}),{threshold:.12});
+e.target.classList.add('in')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('form.inschrijf').forEach(f=>f.addEventListener(
+'submit',ev=>{ev.preventDefault();f.classList.add('done');scrollTo({top:
+f.getBoundingClientRect().top+scrollY-140})}));
 </script></body></html>

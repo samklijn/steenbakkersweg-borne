@@ -1,0 +1,167 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nieuws · Het Fundament · Borne</title>
+<meta name="description" content="Nieuwe woningen in Borne, voor elke fase van je leven.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wdth,wght@62..100,400..800&display=swap"
+rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#ECE8E1;color:#16181D}
+img,svg{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.sec{padding:110px 0}.sec.tight{padding:70px 0}
+.grid{display:grid;gap:28px}.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:
+repeat(4,1fr)}
+.btn{display:inline-block;text-decoration:none;cursor:pointer;border:0;
+font:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.lead{font-size:21px;line-height:1.6;max-width:700px}
+.muted{opacity:.7}.small{font-size:13px}
+.dark{background:#1E2C4C;color:#FFFFFF}
+.softbg{background:#FFFFFF}
+.plan .kavel rect{fill:#D4502F;stroke:#FFFFFF;
+stroke-width:1.5;cursor:pointer;transition:fill .15s,opacity .15s}
+.plan .kavel:hover rect,.plan .kavel.sel rect{fill:#F0B23A}
+.plan .kavel.dim rect{opacity:.15}
+.zoeker{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;
+align-items:start}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.filters a{text-decoration:none;cursor:pointer}
+details{border-bottom:1px solid #16181D33;padding:22px 0}
+details summary{cursor:pointer;font-size:19px;list-style:none;
+display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:24px;line-height:1}
+details[open] summary::after{content:'–'}
+details p{margin-top:12px;max-width:760px}
+.form{display:grid;gap:16px}
+.form label{display:grid;gap:6px;font-size:14px}
+.form input:not([type=checkbox]),.form select,.form textarea{font:inherit;
+padding:14px 16px;border:1px solid #16181D55;background:#ffffffaa;
+color:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{display:flex;gap:8px;align-items:center;padding:10px 14px;
+border:1px solid #16181D55;cursor:pointer;font-size:15px}
+.steps{display:grid}
+.steps li{list-style:none;display:grid;grid-template-columns:80px 1fr;
+gap:20px;padding:24px 0;border-top:1px solid #16181D22}
+.steps li .n{font-size:40px;line-height:1}
+.crumbs{font-size:13px;margin-bottom:26px;opacity:.75}
+.crumbs a{text-decoration:none}
+.ok{display:none}form.done .flds{display:none}form.done .ok{display:
+block}
+footer{padding:70px 0 40px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1}
+.reveal{opacity:0;transform:translateY(22px);transition:all .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.g2,.g3,.g4,.zoeker,footer .cols{
+grid-template-columns:1fr}.sec{padding:70px 0}.wrap{padding:0 18px}}
+
+body{font:17px/1.6 'Archivo',sans-serif}
+h1,h2,h3,h4,.serif{font-family:'Archivo Black',sans-serif;
+text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
+h1{font-size:clamp(52px,9vw,140px)}h2{font-size:clamp(36px,5.4vw,76px)}
+h3{font-size:24px}
+.cond{font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.04em}
+.eyebrow{font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.14em;font-size:15px;color:#D4502F}
+.dark .eyebrow{color:#F0B23A}
+header.site{position:sticky;top:0;z-index:30;background:#ECE8E1;
+border-bottom:3px solid #16181D}
+header.site .top{display:flex;justify-content:space-between;
+align-items:center;height:78px}
+.burger{background:#16181D;color:#ECE8E1;border:0;font:inherit;
+font-stretch:62%;font-weight:800;text-transform:uppercase;letter-spacing:
+.12em;padding:14px 20px;cursor:pointer}
+.overlay{position:fixed;inset:0;background:#1E2C4C;color:#fff;
+z-index:50;display:none;padding:40px;overflow:auto}
+.overlay.open{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.overlay a.big{display:block;font-family:'Archivo Black';font-size:
+clamp(30px,4.6vw,58px);text-transform:uppercase;text-decoration:none;
+line-height:1.18}
+.overlay a.big:hover{color:#F0B23A}
+.btn{background:#D4502F;color:#fff;padding:18px 26px;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.btn.ghost{background:transparent;color:inherit;border:3px solid
+currentColor}
+.btn.y{background:#F0B23A;color:#16181D}
+.hero{padding:56px 0 30px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:
+140px;gap:14px}
+.b{padding:26px;position:relative;overflow:hidden;text-decoration:none;
+display:block;transition:transform .2s}
+a.b:hover{transform:translateY(-4px)}
+.b.red{background:#D4502F;color:#fff}.b.yel{background:#F0B23A;
+color:#16181D}.b.blue{background:#1E2C4C;color:#fff}
+.b.ink{background:#16181D;color:#fff}.b.white{background:#fff;
+border:3px solid #16181D}
+.card{background:#fff;padding:30px;border:3px solid #16181D}
+.dark .card{color:#16181D}
+.num{font-family:'Archivo Black';font-size:80px;line-height:.9}
+.tabs{display:flex;border:3px solid #16181D;width:max-content;
+margin-bottom:26px;max-width:100%;overflow:auto}
+.tabs a{padding:12px 22px;text-decoration:none;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.tabs a.on{background:#16181D;color:#ECE8E1}
+.filters a{border:3px solid #16181D;padding:8px 14px;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+font-size:14px}
+.filters a.on{background:#16181D;color:#ECE8E1}
+.steps li .n{font-family:'Archivo Black';color:#D4502F}
+.form input:not([type=checkbox]),.form select,.form textarea,.chips label{
+border:3px solid #16181D;background:#fff}
+footer{background:#16181D;color:#ECE8E1}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr;
+grid-auto-rows:120px}.bento .b{grid-column:span 2 !important}
+.overlay.open{grid-template-columns:1fr}header.site .btn{display:none}}
+</style></head><body>
+<header class="site"><div class="wrap"><div class="top">
+<a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="30" viewBox="0 0 34 30"><rect x="0" y="16" width="16" height="14" fill="#D4502F"/><rect x="18" y="16" width="16" height="14" fill="#F0B23A"/><rect x="9" y="0" width="16" height="14" fill="#16181D"/></svg><span style="font-family:'Archivo Black';font-size:20px;line-height:.95">HET<br>FUNDAMENT</span></a><div style="display:flex;gap:10px"><a class="btn"
+href="inschrijven.html">Schrijf je in</a><button class="burger"
+onclick="document.getElementById('ov').classList.add('open')">Menu
+</button></div></div></div></header>
+<div class="overlay" id="ov"><div><a class="big" href="index.html">Home</a><a class="big" href="woningen.html">Woningen</a><a class="big" href="plan.html">Het plan</a><a class="big" href="verhaal.html">Het verhaal</a><a class="big" href="kopen.html">Zo werkt kopen</a><a class="big" href="duurzaam.html">Duurzaam</a><a class="big" href="nieuws.html">Nieuws</a><a class="big" href="vragen.html">Vragen</a><a class="big" href="inschrijven.html">Inschrijven</a></div><div><button class="burger"
+style="background:#fff;color:#000;float:right" onclick="document.
+getElementById('ov').classList.remove('open')">Sluiten ×</button>
+<p class="eyebrow" style="margin:90px 0 16px;color:#F0B23A">
+Woningtypes</p><a href="appartement.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Appartement →</a><a href="tuinappartement.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Tuinappartement →</a><a href="rijwoning.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Rij- en hoekwoning →</a><a href="twee-onder-een-kap.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Twee-onder-een-kapwoning →</a><a href="vrijstaand.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Vrijstaande woning →</a></div></div>
+<main><section class="sec" style="padding-top:70px;padding-bottom:70px"><div
+class="wrap"><p class="crumbs"><a href="index.html">Home</a> / <a href="nieuws.html">Nieuws</a></p><p class="eyebrow" style="margin-bottom:16px">Nieuws</p><h1 style="font-size:clamp(42px,
+6.4vw,96px)">Wat er speelt.</h1><p class="lead" style="margin-top:24px">De stand van zaken rond de planvorming en de participatie. Schrijf je in om nieuws als eerste te ontvangen.</p></div></section><section class="sec" style="padding-top:30px"><div class="wrap
+grid g3"><article class="card" id="n1"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Planvorming gestart met de gemeente Borne</h3><p>MvdB Groep en de gemeente Borne werken samen aan het plan voor de Steenbakkersweg. De afspraken worden vastgelegd in een anterieure overeenkomst. Ruimtelijke kwaliteit, leefbaarheid, verkeer, duurzaamheid en inpassing staan centraal.</p></article><article class="card" id="n2"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Keukentafelgesprekken met de buurt</h3><p>Na de zomer gaan we in gesprek met direct omwonenden. Hun reacties en aandachtspunten nemen we mee in de verdere uitwerking van het plan.</p></article><article class="card" id="n3"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Informatiebijeenkomst voor belangstellenden</h3><p>In september volgt een bijeenkomst voor een bredere groep. Wie ingeschreven staat, krijgt de uitnodiging als eerste.</p></article></div></section><section class="sec"><div class="wrap"><div class="bento">
+<div class="b red" style="grid-column:span 4;grid-row:span 2"><h2>Begin bij het fundament.
+</h2></div><a class="b yel" href="inschrijven.html" style="grid-column:span
+2;grid-row:span 2"><p class="cond" style="font-size:20px">Zet me op de lijst
+</p><p style="margin-top:10px">Je hoort als eerste de prijzen en de datum van
+de informatieavond.</p><span class="cond" style="position:absolute;right:
+22px;bottom:16px;font-size:34px">→</span></a></div></div></section></main>
+<footer><div class="wrap"><div class="cols"><div><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="30" viewBox="0 0 34 30"><rect x="0" y="16" width="16" height="14" fill="#D4502F"/><rect x="18" y="16" width="16" height="14" fill="#F0B23A"/><rect x="9" y="0" width="16" height="14" fill="#FFFFFF"/></svg><span style="font-family:'Archivo Black';font-size:20px;line-height:.95">HET<br>FUNDAMENT</span></a>
+<p style="margin-top:16px;max-width:320px">Nieuwe woningen in Borne, voor elke fase van je leven.</p>
+<p style="margin-top:16px">Steenbakkersweg 10, Borne<br>Een ontwikkeling van
+MvdB Groep</p></div><div><p class="eyebrow" style="margin-bottom:12px;
+color:inherit">Pagina's</p><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plan.html">Het plan</a></li><li><a href="verhaal.html">Het verhaal</a></li><li><a href="kopen.html">Zo werkt kopen</a></li><li><a href="duurzaam.html">Duurzaam</a></li><li><a href="nieuws.html">Nieuws</a></li><li><a href="vragen.html">Vragen</a></li><li><a href="inschrijven.html">Inschrijven</a></li></ul></div><div><p class="eyebrow"
+style="margin-bottom:12px;color:inherit">Woningen</p><ul><li><a href="appartement.html">Appartement</a></li><li><a href="tuinappartement.html">Tuinappartement</a></li><li><a href="rijwoning.html">Rij- en hoekwoning</a></li><li><a href="twee-onder-een-kap.html">Twee-onder-een-kapwoning</a></li><li><a href="vrijstaand.html">Vrijstaande woning</a></li></ul>
+</div><div><p class="eyebrow" style="margin-bottom:12px;color:inherit">
+Contact</p><ul><li><a href="inschrijven.html">Schrijf je in</a></li><li><a
+href="vragen.html">Veelgestelde vragen</a></li><li><a href="nieuws.html">
+Nieuws</a></li><li><a href="duurzaam.html">Duurzaam wonen</a></li><li><a
+href="../index.html">Alle drie de richtingen</a></li></ul></div></div>
+<p class="small muted" style="margin-top:50px">Voorbeeldwebsite van Spring
+Marketing Agency, merkrichting 3 van 3. Prijzen zijn een indicatie op
+prijspeil 2025, v.o.n. Aan deze site kunnen geen rechten worden ontleend.</p>
+</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)
+e.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('form.inschrijf').forEach(f=>f.addEventListener(
+'submit',ev=>{ev.preventDefault();f.classList.add('done');scrollTo({top:
+f.getBoundingClientRect().top+scrollY-140})}));
+</script></body></html>

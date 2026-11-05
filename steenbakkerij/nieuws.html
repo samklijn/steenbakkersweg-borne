@@ -1,0 +1,154 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nieuws · De Steenbakkerij · Borne</title>
+<meta name="description" content="Waar Borne zijn stenen bakte, bouwen we nu aan je thuis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;600&display=swap"
+rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#F8F4EC;color:#26201C}
+img,svg{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.sec{padding:110px 0}.sec.tight{padding:70px 0}
+.grid{display:grid;gap:28px}.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:
+repeat(4,1fr)}
+.btn{display:inline-block;text-decoration:none;cursor:pointer;border:0;
+font:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.lead{font-size:21px;line-height:1.6;max-width:700px}
+.muted{opacity:.7}.small{font-size:13px}
+.dark{background:#26201C;color:#EDE3D3}
+.softbg{background:#EDE3D3}
+.plan .kavel rect{fill:#A04A2C;stroke:#EDE3D3;
+stroke-width:1.5;cursor:pointer;transition:fill .15s,opacity .15s}
+.plan .kavel:hover rect,.plan .kavel.sel rect{fill:#C8893B}
+.plan .kavel.dim rect{opacity:.15}
+.zoeker{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;
+align-items:start}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.filters a{text-decoration:none;cursor:pointer}
+details{border-bottom:1px solid #26201C33;padding:22px 0}
+details summary{cursor:pointer;font-size:19px;list-style:none;
+display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:24px;line-height:1}
+details[open] summary::after{content:'–'}
+details p{margin-top:12px;max-width:760px}
+.form{display:grid;gap:16px}
+.form label{display:grid;gap:6px;font-size:14px}
+.form input:not([type=checkbox]),.form select,.form textarea{font:inherit;
+padding:14px 16px;border:1px solid #26201C55;background:#ffffffaa;
+color:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{display:flex;gap:8px;align-items:center;padding:10px 14px;
+border:1px solid #26201C55;cursor:pointer;font-size:15px}
+.steps{display:grid}
+.steps li{list-style:none;display:grid;grid-template-columns:80px 1fr;
+gap:20px;padding:24px 0;border-top:1px solid #26201C22}
+.steps li .n{font-size:40px;line-height:1}
+.crumbs{font-size:13px;margin-bottom:26px;opacity:.75}
+.crumbs a{text-decoration:none}
+.ok{display:none}form.done .flds{display:none}form.done .ok{display:
+block}
+footer{padding:70px 0 40px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1}
+.reveal{opacity:0;transform:translateY(22px);transition:all .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.g2,.g3,.g4,.zoeker,footer .cols{
+grid-template-columns:1fr}.sec{padding:70px 0}.wrap{padding:0 18px}}
+
+body{font:17px/1.75 'Work Sans',sans-serif}
+h1,h2,h3,h4,.serif{font-family:'Fraunces',serif;font-weight:600;
+letter-spacing:-.01em;line-height:1.06}
+h1{font-size:clamp(50px,8vw,118px)}h2{font-size:clamp(34px,4.6vw,62px)}
+h3{font-size:27px}em,.it{font-family:'Fraunces',serif;font-style:italic;
+font-weight:400}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+color:#A04A2C;font-weight:600}
+header.site{border-bottom:1px solid #26201C22;background:#F8F4EC;
+position:sticky;top:0;z-index:30}
+header.site .top{display:flex;justify-content:space-between;
+align-items:center;height:76px}
+header.site nav{display:flex;justify-content:center;gap:34px;
+padding:0 0 16px;font-size:13px;letter-spacing:.12em;text-transform:
+uppercase}
+header.site nav a{text-decoration:none;padding-bottom:3px}
+header.site nav a.on{border-bottom:2px solid #A04A2C}
+.btn{background:#A04A2C;color:#F8F4EC;padding:16px 28px;
+font-weight:600;letter-spacing:.04em}
+.btn.ghost{background:transparent;color:inherit;border:1px solid
+currentColor}
+.hero{background:#A04A2C;color:#F8F4EC;position:relative;
+overflow:hidden;padding:110px 0 100px}
+.hero .art{position:absolute;inset:0;opacity:.16}
+.hero .wrap{position:relative}
+.hero .btn{background:#F8F4EC;color:#A04A2C}
+.hero .btn.ghost{background:transparent;color:#F8F4EC;border:1px solid
+#F8F4EC}
+.dark .btn.ghost{color:#EDE3D3}
+.chap{font-family:'Fraunces',serif;font-style:italic;font-size:22px;
+color:#C8893B}
+.drop::first-letter{font-family:'Fraunces',serif;font-size:88px;
+float:left;line-height:.8;padding:8px 12px 0 0;color:#A04A2C}
+.cols2{columns:2;column-gap:48px}
+.cat a{display:grid;grid-template-columns:90px 1.6fr 1fr 1fr 40px;
+gap:20px;align-items:baseline;padding:30px 12px;border-top:1px solid
+#26201C33;text-decoration:none;transition:background .2s}
+.cat a:hover{background:#EDE3D3}
+.cat .rn{font-family:'Fraunces',serif;font-size:44px;color:#A04A2C}
+.card{background:#F8F4EC;border-top:4px solid #A04A2C;padding:30px}
+.softbg .card{background:#F8F4EC}
+.num{font-family:'Fraunces',serif;font-size:76px;color:#A04A2C;
+line-height:1}
+.filters a{border:1px solid #26201C;padding:8px 16px;font-size:14px}
+.filters a.on{background:#26201C;color:#F8F4EC}
+.steps li .n{font-family:'Fraunces',serif;color:#A04A2C}
+footer{background:#26201C;color:#EDE3D3}
+@media(max-width:900px){header.site nav{overflow-x:auto;justify-content:
+flex-start;gap:20px}.cols2{columns:1}.cat a{grid-template-columns:60px
+1fr}.cat a>span:nth-child(n+3){display:none}}
+</style></head><body>
+<header class="site"><div class="wrap"><div class="top">
+<a href="vragen.html" class="small" style="text-decoration:none;
+letter-spacing:.1em;text-transform:uppercase">Vragen</a><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="32" height="25" viewBox="0 0 32 25"><rect x="0" y="0" width="15" height="6.5" fill="#A04A2C"/><rect x="17" y="0" width="15" height="6.5" fill="#A04A2C"/><rect x="8.5" y="9" width="15" height="6.5" fill="#A04A2C"/><rect x="0" y="18" width="15" height="6.5" fill="#A04A2C"/><rect x="17" y="18" width="15" height="6.5" fill="#A04A2C"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:23px">De Steenbakkerij</span></a><a
+class="btn" href="inschrijven.html" style="padding:12px 20px">Schrijf je in
+</a></div><nav><a href="woningen.html">Woningen</a><a href="plan.html">Het plan</a><a href="verhaal.html">Het verhaal</a><a href="kopen.html">Zo werkt kopen</a><a href="nieuws.html" class="on">Nieuws</a><a href="vragen.html">Vragen</a></nav></div></header>
+<main><section class="sec" style="padding-top:70px;padding-bottom:70px"><div
+class="wrap"><p class="crumbs"><a href="index.html">Home</a> / <a href="nieuws.html">Nieuws</a></p><p class="chap" style="margin-bottom:10px">Nieuws</p><h1 style="font-size:clamp(42px,
+6.4vw,96px)">Wat er speelt.</h1><p class="lead" style="margin-top:24px">De stand van zaken rond de planvorming en de participatie. Schrijf je in om nieuws als eerste te ontvangen.</p></div></section><section class="sec" style="padding-top:30px"><div class="wrap
+grid g3"><article class="card" id="n1"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Planvorming gestart met de gemeente Borne</h3><p>MvdB Groep en de gemeente Borne werken samen aan het plan voor de Steenbakkersweg. De afspraken worden vastgelegd in een anterieure overeenkomst. Ruimtelijke kwaliteit, leefbaarheid, verkeer, duurzaamheid en inpassing staan centraal.</p></article><article class="card" id="n2"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Keukentafelgesprekken met de buurt</h3><p>Na de zomer gaan we in gesprek met direct omwonenden. Hun reacties en aandachtspunten nemen we mee in de verdere uitwerking van het plan.</p></article><article class="card" id="n3"><p class="eyebrow">
+2026</p><h3 style="margin:12px 0">Informatiebijeenkomst voor belangstellenden</h3><p>In september volgt een bijeenkomst voor een bredere groep. Wie ingeschreven staat, krijgt de uitnodiging als eerste.</p></article></div></section><section class="sec dark"><div class="wrap grid g2"
+style="align-items:center"><h2>Gebakken voor generaties.</h2><div><p style="font-size:19px;
+margin-bottom:28px">Schrijf je in en kies je voorkeur. Je hoort als eerste de
+prijzen, de planning en de datum van de informatieavond.</p><a class="btn"
+href="inschrijven.html">Zet me op de lijst</a> <a class="btn ghost"
+href="woningen.html" style="margin-left:8px">Bekijk de woningen</a></div>
+</div></section></main>
+<footer><div class="wrap"><div class="cols"><div><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="32" height="25" viewBox="0 0 32 25"><rect x="0" y="0" width="15" height="6.5" fill="#EDE3D3"/><rect x="17" y="0" width="15" height="6.5" fill="#EDE3D3"/><rect x="8.5" y="9" width="15" height="6.5" fill="#EDE3D3"/><rect x="0" y="18" width="15" height="6.5" fill="#EDE3D3"/><rect x="17" y="18" width="15" height="6.5" fill="#EDE3D3"/></svg><span style="font-family:Fraunces,serif;font-weight:600;font-size:23px">De Steenbakkerij</span></a>
+<p style="margin-top:16px;max-width:320px">Waar Borne zijn stenen bakte, bouwen we nu aan je thuis.</p>
+<p style="margin-top:16px">Steenbakkersweg 10, Borne<br>Een ontwikkeling van
+MvdB Groep</p></div><div><p class="eyebrow" style="margin-bottom:12px;
+color:inherit">Pagina's</p><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plan.html">Het plan</a></li><li><a href="verhaal.html">Het verhaal</a></li><li><a href="kopen.html">Zo werkt kopen</a></li><li><a href="duurzaam.html">Duurzaam</a></li><li><a href="nieuws.html">Nieuws</a></li><li><a href="vragen.html">Vragen</a></li><li><a href="inschrijven.html">Inschrijven</a></li></ul></div><div><p class="eyebrow"
+style="margin-bottom:12px;color:inherit">Woningen</p><ul><li><a href="appartement.html">Appartement</a></li><li><a href="tuinappartement.html">Tuinappartement</a></li><li><a href="rijwoning.html">Rij- en hoekwoning</a></li><li><a href="twee-onder-een-kap.html">Twee-onder-een-kapwoning</a></li><li><a href="vrijstaand.html">Vrijstaande woning</a></li></ul>
+</div><div><p class="eyebrow" style="margin-bottom:12px;color:inherit">
+Contact</p><ul><li><a href="inschrijven.html">Schrijf je in</a></li><li><a
+href="vragen.html">Veelgestelde vragen</a></li><li><a href="nieuws.html">
+Nieuws</a></li><li><a href="duurzaam.html">Duurzaam wonen</a></li><li><a
+href="../index.html">Alle drie de richtingen</a></li></ul></div></div>
+<p class="small muted" style="margin-top:50px">Voorbeeldwebsite van Spring
+Marketing Agency, merkrichting 1 van 3. Prijzen zijn een indicatie op
+prijspeil 2025, v.o.n. Aan deze site kunnen geen rechten worden ontleend.</p>
+</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)
+e.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('form.inschrijf').forEach(f=>f.addEventListener(
+'submit',ev=>{ev.preventDefault();f.classList.add('done');scrollTo({top:
+f.getBoundingClientRect().top+scrollY-140})}));
+</script></body></html>

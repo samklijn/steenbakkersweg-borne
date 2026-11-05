@@ -1,0 +1,221 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home · Het Fundament · Borne</title>
+<meta name="description" content="Nieuwe woningen in Borne, voor elke fase van je leven.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wdth,wght@62..100,400..800&display=swap"
+rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#ECE8E1;color:#16181D}
+img,svg{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.sec{padding:110px 0}.sec.tight{padding:70px 0}
+.grid{display:grid;gap:28px}.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:
+repeat(4,1fr)}
+.btn{display:inline-block;text-decoration:none;cursor:pointer;border:0;
+font:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.lead{font-size:21px;line-height:1.6;max-width:700px}
+.muted{opacity:.7}.small{font-size:13px}
+.dark{background:#1E2C4C;color:#FFFFFF}
+.softbg{background:#FFFFFF}
+.plan .kavel rect{fill:#D4502F;stroke:#FFFFFF;
+stroke-width:1.5;cursor:pointer;transition:fill .15s,opacity .15s}
+.plan .kavel:hover rect,.plan .kavel.sel rect{fill:#F0B23A}
+.plan .kavel.dim rect{opacity:.15}
+.zoeker{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;
+align-items:start}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.filters a{text-decoration:none;cursor:pointer}
+details{border-bottom:1px solid #16181D33;padding:22px 0}
+details summary{cursor:pointer;font-size:19px;list-style:none;
+display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:24px;line-height:1}
+details[open] summary::after{content:'–'}
+details p{margin-top:12px;max-width:760px}
+.form{display:grid;gap:16px}
+.form label{display:grid;gap:6px;font-size:14px}
+.form input:not([type=checkbox]),.form select,.form textarea{font:inherit;
+padding:14px 16px;border:1px solid #16181D55;background:#ffffffaa;
+color:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{display:flex;gap:8px;align-items:center;padding:10px 14px;
+border:1px solid #16181D55;cursor:pointer;font-size:15px}
+.steps{display:grid}
+.steps li{list-style:none;display:grid;grid-template-columns:80px 1fr;
+gap:20px;padding:24px 0;border-top:1px solid #16181D22}
+.steps li .n{font-size:40px;line-height:1}
+.crumbs{font-size:13px;margin-bottom:26px;opacity:.75}
+.crumbs a{text-decoration:none}
+.ok{display:none}form.done .flds{display:none}form.done .ok{display:
+block}
+footer{padding:70px 0 40px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1}
+.reveal{opacity:0;transform:translateY(22px);transition:all .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.g2,.g3,.g4,.zoeker,footer .cols{
+grid-template-columns:1fr}.sec{padding:70px 0}.wrap{padding:0 18px}}
+
+body{font:17px/1.6 'Archivo',sans-serif}
+h1,h2,h3,h4,.serif{font-family:'Archivo Black',sans-serif;
+text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
+h1{font-size:clamp(52px,9vw,140px)}h2{font-size:clamp(36px,5.4vw,76px)}
+h3{font-size:24px}
+.cond{font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.04em}
+.eyebrow{font-stretch:62%;font-weight:800;text-transform:uppercase;
+letter-spacing:.14em;font-size:15px;color:#D4502F}
+.dark .eyebrow{color:#F0B23A}
+header.site{position:sticky;top:0;z-index:30;background:#ECE8E1;
+border-bottom:3px solid #16181D}
+header.site .top{display:flex;justify-content:space-between;
+align-items:center;height:78px}
+.burger{background:#16181D;color:#ECE8E1;border:0;font:inherit;
+font-stretch:62%;font-weight:800;text-transform:uppercase;letter-spacing:
+.12em;padding:14px 20px;cursor:pointer}
+.overlay{position:fixed;inset:0;background:#1E2C4C;color:#fff;
+z-index:50;display:none;padding:40px;overflow:auto}
+.overlay.open{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.overlay a.big{display:block;font-family:'Archivo Black';font-size:
+clamp(30px,4.6vw,58px);text-transform:uppercase;text-decoration:none;
+line-height:1.18}
+.overlay a.big:hover{color:#F0B23A}
+.btn{background:#D4502F;color:#fff;padding:18px 26px;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.btn.ghost{background:transparent;color:inherit;border:3px solid
+currentColor}
+.btn.y{background:#F0B23A;color:#16181D}
+.hero{padding:56px 0 30px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:
+140px;gap:14px}
+.b{padding:26px;position:relative;overflow:hidden;text-decoration:none;
+display:block;transition:transform .2s}
+a.b:hover{transform:translateY(-4px)}
+.b.red{background:#D4502F;color:#fff}.b.yel{background:#F0B23A;
+color:#16181D}.b.blue{background:#1E2C4C;color:#fff}
+.b.ink{background:#16181D;color:#fff}.b.white{background:#fff;
+border:3px solid #16181D}
+.card{background:#fff;padding:30px;border:3px solid #16181D}
+.dark .card{color:#16181D}
+.num{font-family:'Archivo Black';font-size:80px;line-height:.9}
+.tabs{display:flex;border:3px solid #16181D;width:max-content;
+margin-bottom:26px;max-width:100%;overflow:auto}
+.tabs a{padding:12px 22px;text-decoration:none;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.tabs a.on{background:#16181D;color:#ECE8E1}
+.filters a{border:3px solid #16181D;padding:8px 14px;font-stretch:62%;
+font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+font-size:14px}
+.filters a.on{background:#16181D;color:#ECE8E1}
+.steps li .n{font-family:'Archivo Black';color:#D4502F}
+.form input:not([type=checkbox]),.form select,.form textarea,.chips label{
+border:3px solid #16181D;background:#fff}
+footer{background:#16181D;color:#ECE8E1}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr;
+grid-auto-rows:120px}.bento .b{grid-column:span 2 !important}
+.overlay.open{grid-template-columns:1fr}header.site .btn{display:none}}
+</style></head><body>
+<header class="site"><div class="wrap"><div class="top">
+<a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="30" viewBox="0 0 34 30"><rect x="0" y="16" width="16" height="14" fill="#D4502F"/><rect x="18" y="16" width="16" height="14" fill="#F0B23A"/><rect x="9" y="0" width="16" height="14" fill="#16181D"/></svg><span style="font-family:'Archivo Black';font-size:20px;line-height:.95">HET<br>FUNDAMENT</span></a><div style="display:flex;gap:10px"><a class="btn"
+href="inschrijven.html">Schrijf je in</a><button class="burger"
+onclick="document.getElementById('ov').classList.add('open')">Menu
+</button></div></div></div></header>
+<div class="overlay" id="ov"><div><a class="big" href="index.html">Home</a><a class="big" href="woningen.html">Woningen</a><a class="big" href="plan.html">Het plan</a><a class="big" href="verhaal.html">Het verhaal</a><a class="big" href="kopen.html">Zo werkt kopen</a><a class="big" href="duurzaam.html">Duurzaam</a><a class="big" href="nieuws.html">Nieuws</a><a class="big" href="vragen.html">Vragen</a><a class="big" href="inschrijven.html">Inschrijven</a></div><div><button class="burger"
+style="background:#fff;color:#000;float:right" onclick="document.
+getElementById('ov').classList.remove('open')">Sluiten ×</button>
+<p class="eyebrow" style="margin:90px 0 16px;color:#F0B23A">
+Woningtypes</p><a href="appartement.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Appartement →</a><a href="tuinappartement.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Tuinappartement →</a><a href="rijwoning.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Rij- en hoekwoning →</a><a href="twee-onder-een-kap.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Twee-onder-een-kapwoning →</a><a href="vrijstaand.html" style="display:block;text-decoration:none;padding:7px 0;font-size:20px">Vrijstaande woning →</a></div></div>
+<main><section class="hero"><div class="wrap"><div class="bento">
+<div class="b red" style="grid-column:span 4;grid-row:span 3"><p class="cond"
+style="font-size:16px">Borne · Steenbakkersweg</p><h1 style="margin-top:18px;
+font-size:clamp(50px,7vw,112px)">Bouw<br>hier je<br>basis.</h1></div>
+<div class="b white" style="grid-column:span 2;grid-row:span 3;padding:12px">
+<svg viewBox="0 0 520 420"><rect x="0" y="300" width="160" height="120" fill="#D4502F"/><rect x="170" y="300" width="160" height="120" fill="#1E2C4C"/><rect x="340" y="300" width="180" height="120" fill="#F0B23A"/><rect x="80" y="170" width="170" height="120" fill="#F0B23A"/><rect x="260" y="170" width="170" height="120" fill="#D4502F"/><rect x="170" y="40" width="170" height="120" fill="#16181D"/><text x="255" y="112" fill="#fff" font-family="Archivo Black" font-size="34" text-anchor="middle">JIJ</text></svg></div><a class="b yel" href="woningen.html#appartement"
+style="grid-column:span 2"><p class="cond">Starten →</p><p class="num"
+style="font-size:48px">51 m²</p></a><a class="b blue"
+href="woningen.html#rijwoning" style="grid-column:span 2"><p class="cond">
+Groeien →</p><p class="num" style="font-size:48px">3 slpk</p></a><a class="b
+ink" href="woningen.html#vrijstaand" style="grid-column:span 2"><p
+class="cond">Blijven →</p><p class="num" style="font-size:48px">530 m²</p>
+</a></div><p style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a
+class="btn" href="inschrijven.html">Zet me op de lijst</a><a class="btn
+ghost" href="woningen.html">Bekijk de woningen</a></p></div></section>
+<section class="sec"><div class="wrap grid g2" style="align-items:center">
+<div><p class="eyebrow">Het fundament van Borne</p><h2 style="margin:16px 0
+24px">Borne is gebouwd op deze stenen.</h2><p>Met de stenen van Morselt zijn
+de St. Stephanuskerk en de watertoren gebouwd. Op dezelfde plek komt nu het
+fundament voor jouw leven: 135 woningen, van je eerste appartement tot een
+vrijstaand huis aan de plas.</p><p style="margin-top:24px"><a class="btn y"
+href="verhaal.html">Het verhaal</a></p></div><div class="grid g2">
+<div class="card"><p class="num" style="color:#D4502F">1864</p><p>eerste
+steenfabriek</p></div><div class="card"><p class="num">200K</p><p>stenen per
+week</p></div><div class="card"><p class="num">135</p><p>woningen</p></div>
+<div class="card"><p class="num" style="color:#1E2C4C">3</p><p>generaties
+onder één dak</p></div></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p
+class="eyebrow">Kies je basis</p><h2 style="margin:16px 0 36px">Vijf
+woningen. Drie fases.</h2><div class="bento"><a class="b yel" href="appartement.html"
+style="grid-column:span 2;grid-row:span 2"><p class="cond"
+style="font-size:15px">Starten · 26 woningen</p><h3
+style="margin:12px 0 10px;font-size:28px">Appartement</h3><p>51 m² ·
+vanaf ca. € 265.000</p><span class="cond" style="position:absolute;
+right:22px;bottom:16px;font-size:30px">→</span></a><a class="b white" href="tuinappartement.html"
+style="grid-column:span 2;grid-row:span 2"><p class="cond"
+style="font-size:15px">Blijven · 13 woningen</p><h3
+style="margin:12px 0 10px;font-size:28px">Tuinappartement</h3><p>61 m² ·
+vanaf ca. € 305.000</p><span class="cond" style="position:absolute;
+right:22px;bottom:16px;font-size:30px">→</span></a><a class="b red" href="rijwoning.html"
+style="grid-column:span 2;grid-row:span 2"><p class="cond"
+style="font-size:15px">Groeien · 44 woningen</p><h3
+style="margin:12px 0 10px;font-size:28px">Rij- en hoekwoning</h3><p>105 – 118 m² ·
+vanaf ca. € 360.000</p><span class="cond" style="position:absolute;
+right:22px;bottom:16px;font-size:30px">→</span></a><a class="b blue" href="twee-onder-een-kap.html"
+style="grid-column:span 3;grid-row:span 2"><p class="cond"
+style="font-size:15px">Groeien · 12 woningen</p><h3
+style="margin:12px 0 10px;font-size:28px">Twee-onder-een-kapwoning</h3><p>143 – 153 m² ·
+vanaf ca. € 550.000</p><span class="cond" style="position:absolute;
+right:22px;bottom:16px;font-size:30px">→</span></a><a class="b ink" href="vrijstaand.html"
+style="grid-column:span 3;grid-row:span 2"><p class="cond"
+style="font-size:15px">Blijven · 10 woningen</p><h3
+style="margin:12px 0 10px;font-size:28px">Vrijstaande woning</h3><p>155 – 175 m² ·
+vanaf ca. € 651.000</p><span class="cond" style="position:absolute;
+right:22px;bottom:16px;font-size:30px">→</span></a></div></div></section>
+<section class="sec dark"><div class="wrap grid g2" style="align-items:
+center"><div><p class="eyebrow">Het plan</p><h2 style="margin:16px 0 24px">
+Een wijk rond de plas.</h2><p>Ouderen beneden, starters erboven, gezinnen
+eromheen en vrijstaand aan het water.</p><p style="margin-top:24px"><a
+class="btn y" href="plan.html">Bekijk het plan</a></p></div><div>
+<svg viewBox="0 0 1000 720" class="plan" role="img" aria-label="Situatie Steenbakkersweg met 105 bouwnummers"><rect width="1000" height="720" fill="#FFFFFF"/><path d="M330 40 L930 40 L975 250 L900 620 L330 640 Z" fill="#EEEAE2"/><path d="M70 70 C150 30 300 40 320 90 L330 560 C300 600 140 600 90 560 C50 450 40 200 70 70 Z" fill="#1E2C4C"/><text x="190" y="320" fill="#FFFFFF" font-size="22" text-anchor="middle" font-style="italic">de plas</text><path d="M300 40 Q600 70 900 55" stroke="#F0B23A" stroke-width="8" fill="none" stroke-linecap="round"/><text x="610" y="32" font-size="13" fill="#16181D" text-anchor="middle">fietspad langs de plas</text><path d="M480 178 L820 178 M480 178 L480 520 L820 520 M650 178 L650 520" stroke="#16181D" stroke-width="12" fill="none" opacity=".45"/><rect x="345" y="420" width="120" height="70" fill="#16181D" opacity=".55"/><text x="405" y="460" font-size="12" text-anchor="middle" fill="#FFFFFF">ouderen · huur</text><rect x="480" y="530" width="340" height="26" fill="#16181D" opacity=".3"/><text x="650" y="548" font-size="12" text-anchor="middle" fill="#16181D">centraal parkeren</text><rect x="390" y="590" width="330" height="110" fill="#16181D" opacity=".25"/><text x="555" y="650" font-size="13" text-anchor="middle" fill="#16181D">bedrijfshal · niet in verkoop</text><g><a href="woningen.html#bnr-1" class="kavel" data-t="vrijstaand" data-n="1"><rect x="345" y="70" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-2" class="kavel" data-t="vrijstaand" data-n="2"><rect x="409" y="70" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-3" class="kavel" data-t="vrijstaand" data-n="3"><rect x="345" y="138" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-4" class="kavel" data-t="vrijstaand" data-n="4"><rect x="409" y="138" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-5" class="kavel" data-t="vrijstaand" data-n="5"><rect x="345" y="206" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-6" class="kavel" data-t="vrijstaand" data-n="6"><rect x="409" y="206" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-7" class="kavel" data-t="vrijstaand" data-n="7"><rect x="345" y="274" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-8" class="kavel" data-t="vrijstaand" data-n="8"><rect x="409" y="274" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-9" class="kavel" data-t="vrijstaand" data-n="9"><rect x="345" y="342" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-10" class="kavel" data-t="vrijstaand" data-n="10"><rect x="409" y="342" width="56" height="58" rx="2"/></a><a href="woningen.html#bnr-11" class="kavel" data-t="twee-onder-een-kap" data-n="11"><rect x="500" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-12" class="kavel" data-t="twee-onder-een-kap" data-n="12"><rect x="531" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-13" class="kavel" data-t="twee-onder-een-kap" data-n="13"><rect x="568" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-14" class="kavel" data-t="twee-onder-een-kap" data-n="14"><rect x="599" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-15" class="kavel" data-t="twee-onder-een-kap" data-n="15"><rect x="636" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-16" class="kavel" data-t="twee-onder-een-kap" data-n="16"><rect x="667" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-17" class="kavel" data-t="twee-onder-een-kap" data-n="17"><rect x="704" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-18" class="kavel" data-t="twee-onder-een-kap" data-n="18"><rect x="735" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-19" class="kavel" data-t="twee-onder-een-kap" data-n="19"><rect x="772" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-20" class="kavel" data-t="twee-onder-een-kap" data-n="20"><rect x="803" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-21" class="kavel" data-t="twee-onder-een-kap" data-n="21"><rect x="840" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-22" class="kavel" data-t="twee-onder-een-kap" data-n="22"><rect x="871" y="92" width="28" height="64" rx="2"/></a><a href="woningen.html#bnr-23" class="kavel" data-t="rijwoning" data-n="23"><rect x="492" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-24" class="kavel" data-t="rijwoning" data-n="24"><rect x="517" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-25" class="kavel" data-t="rijwoning" data-n="25"><rect x="542" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-26" class="kavel" data-t="rijwoning" data-n="26"><rect x="567" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-27" class="kavel" data-t="rijwoning" data-n="27"><rect x="592" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-28" class="kavel" data-t="rijwoning" data-n="28"><rect x="617" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-29" class="kavel" data-t="rijwoning" data-n="29"><rect x="492" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-30" class="kavel" data-t="rijwoning" data-n="30"><rect x="517" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-31" class="kavel" data-t="rijwoning" data-n="31"><rect x="542" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-32" class="kavel" data-t="rijwoning" data-n="32"><rect x="567" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-33" class="kavel" data-t="rijwoning" data-n="33"><rect x="592" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-34" class="kavel" data-t="rijwoning" data-n="34"><rect x="662" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-35" class="kavel" data-t="rijwoning" data-n="35"><rect x="687" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-36" class="kavel" data-t="rijwoning" data-n="36"><rect x="712" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-37" class="kavel" data-t="rijwoning" data-n="37"><rect x="737" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-38" class="kavel" data-t="rijwoning" data-n="38"><rect x="762" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-39" class="kavel" data-t="rijwoning" data-n="39"><rect x="787" y="196" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-40" class="kavel" data-t="rijwoning" data-n="40"><rect x="662" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-41" class="kavel" data-t="rijwoning" data-n="41"><rect x="687" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-42" class="kavel" data-t="rijwoning" data-n="42"><rect x="712" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-43" class="kavel" data-t="rijwoning" data-n="43"><rect x="737" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-44" class="kavel" data-t="rijwoning" data-n="44"><rect x="762" y="294" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-45" class="kavel" data-t="rijwoning" data-n="45"><rect x="492" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-46" class="kavel" data-t="rijwoning" data-n="46"><rect x="517" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-47" class="kavel" data-t="rijwoning" data-n="47"><rect x="542" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-48" class="kavel" data-t="rijwoning" data-n="48"><rect x="567" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-49" class="kavel" data-t="rijwoning" data-n="49"><rect x="592" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-50" class="kavel" data-t="rijwoning" data-n="50"><rect x="617" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-51" class="kavel" data-t="rijwoning" data-n="51"><rect x="492" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-52" class="kavel" data-t="rijwoning" data-n="52"><rect x="517" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-53" class="kavel" data-t="rijwoning" data-n="53"><rect x="542" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-54" class="kavel" data-t="rijwoning" data-n="54"><rect x="567" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-55" class="kavel" data-t="rijwoning" data-n="55"><rect x="592" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-56" class="kavel" data-t="rijwoning" data-n="56"><rect x="662" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-57" class="kavel" data-t="rijwoning" data-n="57"><rect x="687" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-58" class="kavel" data-t="rijwoning" data-n="58"><rect x="712" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-59" class="kavel" data-t="rijwoning" data-n="59"><rect x="737" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-60" class="kavel" data-t="rijwoning" data-n="60"><rect x="762" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-61" class="kavel" data-t="rijwoning" data-n="61"><rect x="787" y="356" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-62" class="kavel" data-t="rijwoning" data-n="62"><rect x="662" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-63" class="kavel" data-t="rijwoning" data-n="63"><rect x="687" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-64" class="kavel" data-t="rijwoning" data-n="64"><rect x="712" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-65" class="kavel" data-t="rijwoning" data-n="65"><rect x="737" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-66" class="kavel" data-t="rijwoning" data-n="66"><rect x="762" y="454" width="23" height="46" rx="2"/></a><a href="woningen.html#bnr-67" class="kavel" data-t="tuinappartement" data-n="67"><rect x="836" y="200" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-68" class="kavel" data-t="tuinappartement" data-n="68"><rect x="836" y="220" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-69" class="kavel" data-t="tuinappartement" data-n="69"><rect x="836" y="240" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-70" class="kavel" data-t="tuinappartement" data-n="70"><rect x="836" y="260" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-71" class="kavel" data-t="tuinappartement" data-n="71"><rect x="836" y="280" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-72" class="kavel" data-t="tuinappartement" data-n="72"><rect x="836" y="300" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-73" class="kavel" data-t="tuinappartement" data-n="73"><rect x="836" y="320" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-74" class="kavel" data-t="tuinappartement" data-n="74"><rect x="836" y="340" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-75" class="kavel" data-t="tuinappartement" data-n="75"><rect x="836" y="360" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-76" class="kavel" data-t="tuinappartement" data-n="76"><rect x="836" y="380" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-77" class="kavel" data-t="tuinappartement" data-n="77"><rect x="836" y="400" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-78" class="kavel" data-t="tuinappartement" data-n="78"><rect x="836" y="420" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-79" class="kavel" data-t="tuinappartement" data-n="79"><rect x="836" y="440" width="26" height="17" rx="2"/></a><a href="woningen.html#bnr-80" class="kavel" data-t="appartement" data-n="80"><rect x="868" y="200" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-81" class="kavel" data-t="appartement" data-n="81"><rect x="894" y="200" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-82" class="kavel" data-t="appartement" data-n="82"><rect x="920" y="200" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-83" class="kavel" data-t="appartement" data-n="83"><rect x="868" y="229" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-84" class="kavel" data-t="appartement" data-n="84"><rect x="894" y="229" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-85" class="kavel" data-t="appartement" data-n="85"><rect x="920" y="229" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-86" class="kavel" data-t="appartement" data-n="86"><rect x="868" y="258" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-87" class="kavel" data-t="appartement" data-n="87"><rect x="894" y="258" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-88" class="kavel" data-t="appartement" data-n="88"><rect x="920" y="258" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-89" class="kavel" data-t="appartement" data-n="89"><rect x="868" y="287" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-90" class="kavel" data-t="appartement" data-n="90"><rect x="894" y="287" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-91" class="kavel" data-t="appartement" data-n="91"><rect x="920" y="287" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-92" class="kavel" data-t="appartement" data-n="92"><rect x="868" y="316" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-93" class="kavel" data-t="appartement" data-n="93"><rect x="894" y="316" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-94" class="kavel" data-t="appartement" data-n="94"><rect x="920" y="316" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-95" class="kavel" data-t="appartement" data-n="95"><rect x="868" y="345" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-96" class="kavel" data-t="appartement" data-n="96"><rect x="894" y="345" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-97" class="kavel" data-t="appartement" data-n="97"><rect x="920" y="345" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-98" class="kavel" data-t="appartement" data-n="98"><rect x="868" y="374" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-99" class="kavel" data-t="appartement" data-n="99"><rect x="894" y="374" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-100" class="kavel" data-t="appartement" data-n="100"><rect x="920" y="374" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-101" class="kavel" data-t="appartement" data-n="101"><rect x="868" y="403" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-102" class="kavel" data-t="appartement" data-n="102"><rect x="894" y="403" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-103" class="kavel" data-t="appartement" data-n="103"><rect x="920" y="403" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-104" class="kavel" data-t="appartement" data-n="104"><rect x="868" y="432" width="24" height="26" rx="2"/></a><a href="woningen.html#bnr-105" class="kavel" data-t="appartement" data-n="105"><rect x="894" y="432" width="24" height="26" rx="2"/></a></g><text x="895" y="190" font-size="12" text-anchor="middle" fill="#16181D">appartementen</text><g transform="translate(950 680)"><path d="M0 -24 L8 0 L0 -6 L-8 0 Z" fill="#16181D"/><text y="16" font-size="12" text-anchor="middle" fill="#16181D">N</text></g></svg></div></div></section><section class="sec"><div class="wrap"><div class="bento">
+<div class="b red" style="grid-column:span 4;grid-row:span 2"><h2>Begin bij het fundament.
+</h2></div><a class="b yel" href="inschrijven.html" style="grid-column:span
+2;grid-row:span 2"><p class="cond" style="font-size:20px">Zet me op de lijst
+</p><p style="margin-top:10px">Je hoort als eerste de prijzen en de datum van
+de informatieavond.</p><span class="cond" style="position:absolute;right:
+22px;bottom:16px;font-size:34px">→</span></a></div></div></section></main>
+<footer><div class="wrap"><div class="cols"><div><a href="index.html" class="logo" style="display:flex;gap:12px;align-items:center;text-decoration:none"><svg width="34" height="30" viewBox="0 0 34 30"><rect x="0" y="16" width="16" height="14" fill="#D4502F"/><rect x="18" y="16" width="16" height="14" fill="#F0B23A"/><rect x="9" y="0" width="16" height="14" fill="#FFFFFF"/></svg><span style="font-family:'Archivo Black';font-size:20px;line-height:.95">HET<br>FUNDAMENT</span></a>
+<p style="margin-top:16px;max-width:320px">Nieuwe woningen in Borne, voor elke fase van je leven.</p>
+<p style="margin-top:16px">Steenbakkersweg 10, Borne<br>Een ontwikkeling van
+MvdB Groep</p></div><div><p class="eyebrow" style="margin-bottom:12px;
+color:inherit">Pagina's</p><ul><li><a href="index.html">Home</a></li><li><a href="woningen.html">Woningen</a></li><li><a href="plan.html">Het plan</a></li><li><a href="verhaal.html">Het verhaal</a></li><li><a href="kopen.html">Zo werkt kopen</a></li><li><a href="duurzaam.html">Duurzaam</a></li><li><a href="nieuws.html">Nieuws</a></li><li><a href="vragen.html">Vragen</a></li><li><a href="inschrijven.html">Inschrijven</a></li></ul></div><div><p class="eyebrow"
+style="margin-bottom:12px;color:inherit">Woningen</p><ul><li><a href="appartement.html">Appartement</a></li><li><a href="tuinappartement.html">Tuinappartement</a></li><li><a href="rijwoning.html">Rij- en hoekwoning</a></li><li><a href="twee-onder-een-kap.html">Twee-onder-een-kapwoning</a></li><li><a href="vrijstaand.html">Vrijstaande woning</a></li></ul>
+</div><div><p class="eyebrow" style="margin-bottom:12px;color:inherit">
+Contact</p><ul><li><a href="inschrijven.html">Schrijf je in</a></li><li><a
+href="vragen.html">Veelgestelde vragen</a></li><li><a href="nieuws.html">
+Nieuws</a></li><li><a href="duurzaam.html">Duurzaam wonen</a></li><li><a
+href="../index.html">Alle drie de richtingen</a></li></ul></div></div>
+<p class="small muted" style="margin-top:50px">Voorbeeldwebsite van Spring
+Marketing Agency, merkrichting 3 van 3. Prijzen zijn een indicatie op
+prijspeil 2025, v.o.n. Aan deze site kunnen geen rechten worden ontleend.</p>
+</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)
+e.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('form.inschrijf').forEach(f=>f.addEventListener(
+'submit',ev=>{ev.preventDefault();f.classList.add('done');scrollTo({top:
+f.getBoundingClientRect().top+scrollY-140})}));
+</script></body></html>
